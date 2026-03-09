@@ -1,6 +1,19 @@
 const ProductVisual = () => {
   return (
-    <div className="bg-card rounded-2xl shadow-card p-5 border border-border max-w-sm mx-auto text-left">
+    <div className="bg-card rounded-2xl shadow-card p-5 border border-border max-w-sm mx-auto text-left animate-wobble">
+      <style>{`
+        @keyframes wobble {
+          0%, 100% { transform: rotate(0deg); }
+          15% { transform: rotate(1.5deg); }
+          30% { transform: rotate(-1.2deg); }
+          45% { transform: rotate(0.8deg); }
+          60% { transform: rotate(-0.5deg); }
+          75% { transform: rotate(0.3deg); }
+        }
+        .animate-wobble {
+          animation: wobble 3s ease-in-out infinite;
+        }
+      `}</style>
       <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-3">
         Create recurring payment
       </p>
