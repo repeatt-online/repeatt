@@ -1,5 +1,6 @@
 import { useState, forwardRef } from "react";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 
 const options = [
   "Rent",
@@ -15,8 +16,9 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
   const [payment, setPayment] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -26,15 +28,18 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
       return;
     }
 
-    const entry = {
+    setLoading(true);
+    const { error: dbError } = await supabase.from("waitlist").insert({
       email: trimmed,
-      payment: payment || "Not specified",
-      timestamp: new Date().toISOString(),
-    };
+      payment_preference: payment || null,
+    });
 
-    const existing = JSON.parse(localStorage.getItem("repeat_waitlist") || "[]");
-    existing.push(entry);
-    localStorage.setItem("repeat_waitlist", JSON.stringify(existing));
+    setLoading(false);
+
+    if (dbError) {
+      setError("Something went wrong. Please try again.");
+      return;
+    }
 
     setSubmitted(true);
   };
@@ -44,7 +49,7 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
       <section ref={ref} className="py-16 px-4 bg-accent/30">
         <div className="container max-w-lg mx-auto text-center">
           <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mx-auto mb-4">
-            <span className="text-2xl">✓</span>
+            <span className="text-2xl text-primary-foreground">✓</span>
           </div>
           <h2 className="text-xl font-bold text-foreground">You're on the list!</h2>
           <p className="text-sm text-muted-foreground mt-2">
@@ -86,8 +91,8 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
               <option key={o} value={o}>{o}</option>
             ))}
           </select>
-          <Button variant="hero" size="lg" className="w-full h-12 text-base" type="submit">
-            Join Waitlist
+          <Button variant="hero" size="lg" className="w-full h-12 text-base" type="submit" disabled={loading}>
+            {loading ? "Joining..." : "Join Waitlist"}
           </Button>
         </form>
       </div>
