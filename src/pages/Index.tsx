@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useRef } from "react";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import DashboardVisual from "@/components/DashboardVisual";
+import UseCasesSection from "@/components/UseCasesSection";
+import ValueSection from "@/components/ValueSection";
+import WaitlistSection from "@/components/WaitlistSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  const waitlistRef = useRef<HTMLDivElement>(null);
+
+  const scrollToWaitlist = () => {
+    waitlistRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navbar onWaitlistClick={scrollToWaitlist} />
+      <HeroSection onWaitlistClick={scrollToWaitlist} />
+      <DashboardVisual />
+      <UseCasesSection />
+      <ValueSection />
+      <WaitlistSection ref={waitlistRef} />
+      <Footer />
     </div>
   );
 };
