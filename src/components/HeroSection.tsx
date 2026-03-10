@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import ProductVisual from "./ProductVisual";
 
-const HeroSection = ({ onWaitlistClick }: { onWaitlistClick: () => void }) => {
+const HeroSection = ({ onWaitlistClick }: {onWaitlistClick: () => void;}) => {
   return (
     <section className="pt-20 pb-8 px-4 bg-accent/50">
       <div className="container max-w-lg mx-auto text-center">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-foreground leading-tight animate-fade-up whitespace-nowrap">
-          Set any UPI payment on{" "}
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground leading-tight animate-fade-up md:text-3xl">
+          Set any payment on{" "}
           <span className="text-gradient-brand">repeatt.</span>
         </h1>
         <p className="mt-3 text-muted-foreground text-sm sm:text-base animate-fade-up" style={{ animationDelay: "0.1s" }}>
@@ -17,16 +17,16 @@ const HeroSection = ({ onWaitlistClick }: { onWaitlistClick: () => void }) => {
           size="lg"
           className="mt-6 w-full sm:w-auto text-base px-8 py-3 h-12 animate-fade-up"
           style={{ animationDelay: "0.2s" }}
-          onClick={onWaitlistClick}
-        >
-          Get Early Access <span className="ml-1">→</span>
+          onClick={onWaitlistClick}>
+          
+          Join Waitlist <span className="ml-1">→</span>
         </Button>
         <div className="mt-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <ProductVisual />
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
