@@ -17,7 +17,7 @@ const ProductVisual = () => {
 
       {/* Green header */}
       <div className="bg-primary px-5 py-3.5">
-        <p className="text-sm font-semibold text-primary-foreground">
+        <p className="text-sm font-semibold text-primary-foreground text-center">
           Create recurring payment
         </p>
       </div>
@@ -70,8 +70,8 @@ const ProductVisual = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default ProductVisual;
