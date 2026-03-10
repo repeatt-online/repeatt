@@ -1,11 +1,12 @@
-import { useRef } from "react";
+import { useRef, lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import DashboardVisual from "@/components/DashboardVisual";
-import UseCasesSection from "@/components/UseCasesSection";
-import ValueSection from "@/components/ValueSection";
 import WaitlistSection from "@/components/WaitlistSection";
-import Footer from "@/components/Footer";
+
+const DashboardVisual = lazy(() => import("@/components/DashboardVisual"));
+const UseCasesSection = lazy(() => import("@/components/UseCasesSection"));
+const ValueSection = lazy(() => import("@/components/ValueSection"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   const waitlistRef = useRef<HTMLDivElement>(null);
@@ -19,10 +20,12 @@ const Index = () => {
       <Navbar />
       <HeroSection onWaitlistClick={scrollToWaitlist} />
       <WaitlistSection ref={waitlistRef} />
-      <DashboardVisual />
-      <UseCasesSection />
-      <ValueSection />
-      <Footer />
+      <Suspense fallback={<div className="h-48" />}>
+        <DashboardVisual />
+        <UseCasesSection />
+        <ValueSection />
+        <Footer />
+      </Suspense>
     </div>
   );
 };
