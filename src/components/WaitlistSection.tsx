@@ -77,6 +77,12 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
               placeholder="Your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              onFocus={(e) => {
+                const el = e.currentTarget;
+                setTimeout(() => {
+                  el.scrollIntoView({ behavior: "smooth", block: "center" });
+                }, 300);
+              }}
               className="w-full h-11 px-4 rounded-xl border border-input bg-card text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
             
             {error && <p className="text-xs text-destructive mt-1">{error}</p>}
