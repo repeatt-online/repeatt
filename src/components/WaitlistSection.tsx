@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 
 const options = [
-  "Rent",
-  "Maid",
-  "Cook",
-  "Subscriptions",
-  "Family allowance",
-  "Other",
-];
+"Rent",
+"Maid",
+"Cook",
+"Subscriptions",
+"Family allowance",
+"Other"];
+
 
 const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
   const [email, setEmail] = useState("");
@@ -31,7 +31,7 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
     setLoading(true);
     const { error: dbError } = await supabase.from("waitlist").insert({
       email: trimmed,
-      payment_preference: payment || null,
+      payment_preference: payment || null
     });
 
     setLoading(false);
@@ -56,8 +56,8 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
             We'll invite early users soon.
           </p>
         </div>
-      </section>
-    );
+      </section>);
+
   }
 
   return (
@@ -77,27 +77,27 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
               placeholder="Your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full h-11 px-4 rounded-xl border border-input bg-card text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-            />
+              className="w-full h-11 px-4 rounded-xl border border-input bg-card text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            
             {error && <p className="text-xs text-destructive mt-1">{error}</p>}
           </div>
-          <select
-            value={payment}
-            onChange={(e) => setPayment(e.target.value)}
-            className="w-full h-11 px-4 rounded-xl border border-input bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring appearance-none"
-          >
-            <option value="">Which payment to automate? (optional)</option>
-            {options.map((o) => (
-              <option key={o} value={o}>{o}</option>
-            ))}
-          </select>
+          
+
+
+
+
+
+
+
+
+          
           <Button variant="hero" size="lg" className="w-full h-12 text-base" type="submit" disabled={loading}>
             {loading ? "Joining..." : <>Get Early Access <span className="ml-1">→</span></>}
           </Button>
         </form>
       </div>
-    </section>
-  );
+    </section>);
+
 });
 
 WaitlistSection.displayName = "WaitlistSection";
