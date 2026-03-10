@@ -15,7 +15,7 @@ const HeroSection = ({ onWaitlistClick }: {onWaitlistClick: () => void;}) => {
         <Button
           variant="hero"
           size="lg"
-          className="mt-6 w-full sm:w-auto text-sm px-6 py-2 h-10 rounded-full animate-fade-up"
+          className="mt-6 text-sm px-6 py-2 h-10 rounded-full animate-fade-up"
           style={{ animationDelay: "0.2s" }}
           onClick={onWaitlistClick}>
           
