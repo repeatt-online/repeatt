@@ -70,7 +70,7 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
           Early members get free forever access.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-3 max-w-sm mx-auto text-left">
+        <form onSubmit={handleSubmit} className="space-y-3 max-w-sm mx-auto text-left flex flex-col items-center">
           <div>
             <input
               type="email"
