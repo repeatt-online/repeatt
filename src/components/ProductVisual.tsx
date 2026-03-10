@@ -50,7 +50,7 @@ const ProductVisual = () => {
             <CalendarDays className="w-4 h-4 text-muted-foreground" />
             <span className="text-muted-foreground text-sm">Frequency</span>
           </div>
-          <span className="font-semibold text-primary text-sm">Monthly</span>
+          <span className="font-semibold text-sm text-emerald-500">Monthly</span>
         </div>
 
         {/* Date */}
