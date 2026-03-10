@@ -51,13 +51,13 @@ const ProductVisual = () => {
         </div>
 
         {/* Date */}
-        <div className="flex justify-between items-center py-3 border-b border-dashed border-border">
-          <div className="flex items-center gap-2.5">
-            <span className="w-4" />
-            <span className="text-muted-foreground text-sm">Frequency</span>
-          </div>
-          <span className="font-medium text-foreground text-sm">1st of every month</span>
-        </div>
+        
+
+
+
+
+
+        
 
         {/* Recurring toggle */}
         <div className="flex justify-between items-center py-3 mt-1 bg-accent/50 -mx-5 px-5 rounded-b-xl">
