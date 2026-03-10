@@ -7,7 +7,7 @@ const HeroSection = ({ onWaitlistClick }: {onWaitlistClick: () => void;}) => {
       <div className="container max-w-lg mx-auto text-center">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground leading-tight animate-fade-up md:text-3xl">
           Set any payment on{" "}
-          <span className="text-gradient-brand">repeatt.</span>
+          <span className="text-gradient-brand">Repeatt.</span>
         </h1>
         <p className="mt-3 text-sm sm:text-base animate-fade-up text-muted-foreground font-medium" style={{ animationDelay: "0.1s" }}>
           Rent • Maid • Cook • Driver • Subscriptions
