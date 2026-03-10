@@ -18,10 +18,10 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection onWaitlistClick={scrollToWaitlist} />
+      <WaitlistSection ref={waitlistRef} />
       <DashboardVisual />
       <UseCasesSection />
       <ValueSection />
-      <WaitlistSection ref={waitlistRef} />
       <Footer />
     </div>
   );
