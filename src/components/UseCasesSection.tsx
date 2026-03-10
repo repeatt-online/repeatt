@@ -1,13 +1,13 @@
 import { Home, Sparkles, CookingPot, Users, Smartphone, Car } from "lucide-react";
 
 const cases = [
-  { icon: Home, label: "Rent", desc: "Automate monthly rent payments." },
-  { icon: Sparkles, label: "Maid", desc: "Pay household help automatically." },
-  { icon: CookingPot, label: "Cook", desc: "Never forget monthly cook salary." },
-  { icon: Users, label: "Parents", desc: "Send allowance automatically." },
-  { icon: Smartphone, label: "Apps", desc: "Track subscriptions like Netflix or Spotify." },
-  { icon: Car, label: "Services", desc: "Car wash, internet, gym memberships." },
-];
+{ icon: Home, label: "Rent", desc: "Automate monthly rent payments." },
+{ icon: Sparkles, label: "Maid", desc: "Pay household help automatically." },
+{ icon: CookingPot, label: "Cook", desc: "Never forget monthly cook salary." },
+{ icon: Users, label: "Parents", desc: "Send allowance automatically." },
+{ icon: Smartphone, label: "Apps", desc: "Track subscriptions like Netflix or Spotify." },
+{ icon: Car, label: "Services", desc: "Car wash, internet, gym memberships." }];
+
 
 const UseCasesSection = () => {
   return (
@@ -17,22 +17,22 @@ const UseCasesSection = () => {
           Payments that repeat every month.
         </h2>
         <div className="grid grid-cols-2 gap-3">
-          {cases.map((c, i) => (
-            <div
-              key={i}
-              className="bg-card rounded-xl p-4 border border-border shadow-sm hover:shadow-card transition-shadow"
-            >
+          {cases.map((c, i) =>
+          <div
+            key={i}
+            className="bg-card rounded-xl p-4 border border-border shadow-sm hover:shadow-card transition-shadow">
+            
               <div className="w-9 h-9 rounded-lg bg-accent flex items-center justify-center mb-2">
                 <c.icon className="w-4.5 h-4.5 text-accent-foreground" />
               </div>
-              <p className="font-semibold text-sm text-foreground">{c.label}</p>
+              <p className="font-semibold text-sm text-foreground text-center">{c.label}</p>
               <p className="text-xs text-muted-foreground mt-0.5">{c.desc}</p>
             </div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default UseCasesSection;
