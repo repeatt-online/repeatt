@@ -67,7 +67,7 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
           Be the first to try Repeatt.
         </h2>
         <p className="text-sm text-muted-foreground mt-2 mb-6">
-
+          Early members get free forever access.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-3 max-w-sm mx-auto text-left">
