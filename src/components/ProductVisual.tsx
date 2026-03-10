@@ -17,7 +17,7 @@ const ProductVisual = () => {
 
       {/* Green header */}
       <div className="bg-primary px-5 py-3.5">
-        <p className="text-sm font-semibold text-primary-foreground text-center">
+        <p className="text-sm text-primary-foreground text-center font-bold">
           Create recurring payment
         </p>
       </div>
