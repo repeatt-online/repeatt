@@ -8,11 +8,11 @@ const Navbar = () => {
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
             <RefreshCw className="w-4 h-4 text-primary-foreground" />
           </div>
-          <span className="text-lg font-bold text-foreground">Repeatt</span>
+          <span className="text-lg font-bold text-emerald-500">Repeatt</span>
         </div>
       </div>
-    </nav>
-  );
+    </nav>);
+
 };
 
 export default Navbar;
