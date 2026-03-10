@@ -13,7 +13,7 @@ const DashboardVisual = () => {
     <section className="py-12 px-4 bg-background">
       <div className="container max-w-lg mx-auto">
         <div className="bg-card rounded-2xl shadow-card p-5 border border-border">
-          <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-4 text-center">
+          <p className="text-xs text-primary uppercase tracking-wider mb-4 text-center font-bold">
             Your recurring payments
           </p>
           <div className="space-y-0">
