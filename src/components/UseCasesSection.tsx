@@ -20,12 +20,11 @@ const UseCasesSection = () => {
           {cases.map((c, i) =>
           <div
             key={i}
-            className="bg-card rounded-xl p-4 border border-border shadow-sm hover:shadow-card transition-shadow">
-            
+            className="bg-card rounded-xl p-4 border border-border shadow-sm hover:shadow-card transition-shadow flex flex-col items-center text-center">
               <div className="w-9 h-9 rounded-lg bg-accent flex items-center justify-center mb-2">
                 <c.icon className="w-4.5 h-4.5 text-accent-foreground" />
               </div>
-              <p className="font-semibold text-sm text-foreground text-center">{c.label}</p>
+              <p className="font-semibold text-sm text-foreground">{c.label}</p>
               <p className="text-xs text-muted-foreground mt-0.5">{c.desc}</p>
             </div>
           )}
