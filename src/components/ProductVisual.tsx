@@ -19,7 +19,7 @@ const ProductVisual = () => {
       `}</style>
 
       {/* Green header */}
-      <div className="bg-primary px-5 py-3.5">
+      <div className="px-5 py-3.5 bg-emerald-500">
         <p className="text-sm text-primary-foreground text-center font-bold">
           Create recurring payment
         </p>
@@ -65,8 +65,8 @@ const ProductVisual = () => {
         {/* Recurring toggle */}
         <div
           className="flex justify-between items-center py-3 mt-1 bg-accent/50 -mx-5 px-5 rounded-b-xl cursor-pointer select-none"
-          onClick={() => setIsRecurring(!isRecurring)}
-        >
+          onClick={() => setIsRecurring(!isRecurring)}>
+          
           <span className="font-semibold text-foreground text-sm">Recurring</span>
           <div className="flex items-center gap-1.5">
             <span className={`text-xs font-semibold ${isRecurring ? 'text-primary' : 'text-muted-foreground'}`}>
