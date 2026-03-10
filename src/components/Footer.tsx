@@ -16,7 +16,7 @@ const Footer = () => {
           <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
           <a href="mailto:hello@repeatpay.in" className="hover:text-foreground transition-colors">Contact</a>
         </div>
-        <p className="text-xs text-muted-foreground mt-4">© 2026 Repeat. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground mt-4">© 2026 Repeatt. All rights reserved.</p>
       </div>
     </footer>
   );

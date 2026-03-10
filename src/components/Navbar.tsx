@@ -9,7 +9,7 @@ const Navbar = ({ onWaitlistClick }: { onWaitlistClick: () => void }) => {
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
             <RefreshCw className="w-4 h-4 text-primary-foreground" />
           </div>
-          <span className="text-lg font-bold text-foreground">Repeat</span>
+          <span className="text-lg font-bold text-foreground">Repeatt</span>
         </div>
         <Button variant="hero" size="sm" onClick={onWaitlistClick}>
           Join Waitlist

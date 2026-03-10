@@ -16,7 +16,7 @@ const Privacy = () => (
           <li>Optional survey response (which payment you want to automate)</li>
           <li>Timestamp of submission</li>
         </ul>
-        <p>Your data is <strong className="text-foreground">never sold or shared</strong> with third parties. We use it only to notify you about early access to Repeat.</p>
+        <p>Your data is <strong className="text-foreground">never sold or shared</strong> with third parties. We use it only to notify you about early access to Repeatt.</p>
         <p>For questions, contact <a href="mailto:hello@repeatpay.in" className="text-primary hover:underline">hello@repeatpay.in</a>.</p>
       </div>
     </div>
