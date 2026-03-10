@@ -1,10 +1,10 @@
 import { Check } from "lucide-react";
 
 const points = [
-  "Set payments to repeat",
-  "Track subscriptions",
+  "Set it once. It pays itself",
+  "Every payment, automated - UPI to anyone",
   "See total monthly recurring spend",
-  "Never forget monthly payments again",
+  "Rent paid. Maid paid. You didn't lift a finger",
 ];
 
 const ValueSection = () => {
