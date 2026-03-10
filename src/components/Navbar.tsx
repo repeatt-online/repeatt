@@ -12,7 +12,7 @@ const Navbar = ({ onWaitlistClick }: { onWaitlistClick: () => void }) => {
           <span className="text-lg font-bold text-foreground">Repeatt</span>
         </div>
         <Button variant="hero" size="sm" onClick={onWaitlistClick}>
-          Join Waitlist
+          Get Early Access
         </Button>
       </div>
     </nav>
