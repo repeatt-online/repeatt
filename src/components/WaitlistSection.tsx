@@ -98,7 +98,7 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
 
           
           <Button variant="hero" size="lg" className="w-full h-12 text-base" type="submit" disabled={loading}>
-            {loading ? "Joining..." : <>Get Early Access <span className="ml-1">→</span></>}
+            {loading ? "Joining..." : <>Join Waitlist <span className="ml-1">→</span></>}
           </Button>
         </form>
       </div>
