@@ -66,7 +66,7 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
         <h2 className="text-xl sm:text-2xl font-bold text-foreground">
           Be the first to try Repeatt.
         </h2>
-        <p className="text-sm text-muted-foreground mt-2 mb-6">
+        <p className="text-sm text-muted-foreground mt-2 mb-6 font-bold">
           Early members get free forever access.
         </p>
 
