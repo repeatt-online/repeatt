@@ -64,7 +64,7 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
     <section ref={ref} className="py-16 px-4 bg-accent/30">
       <div className="container max-w-lg mx-auto text-center">
         <h2 className="text-xl sm:text-2xl font-bold text-foreground">
-
+          Stop paying manually.
         </h2>
         <p className="text-sm text-muted-foreground mt-2 mb-6 font-bold">
           Early members get free forever access.
