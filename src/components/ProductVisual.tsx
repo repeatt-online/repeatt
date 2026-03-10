@@ -1,8 +1,11 @@
-import { IndianRupee, User, CalendarDays, RefreshCw } from "lucide-react";
+import { useState } from "react";
+import { IndianRupee, User, CalendarDays } from "lucide-react";
 
 const ProductVisual = () => {
+  const [isRecurring, setIsRecurring] = useState(true);
+
   return (
-    <div className="bg-card rounded-2xl shadow-card border border-border max-w-sm mx-auto text-left animate-wobble overflow-hidden">
+    <div className={`bg-card rounded-2xl shadow-card border border-border max-w-sm mx-auto text-left animate-wobble overflow-hidden transition-opacity duration-300 ${!isRecurring ? 'opacity-50' : ''}`}>
       <style>{`
         @keyframes wobble {
           0%, 100% { transform: rotate(0deg); }
