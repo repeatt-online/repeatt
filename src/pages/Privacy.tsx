@@ -9,7 +9,7 @@ const Privacy = () => (
       </Link>
       <h1 className="text-2xl font-bold text-foreground mb-4">Privacy Policy</h1>
       <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-        <p>Repeat collects your email address and optional survey response solely for the purpose of managing our waitlist.</p>
+        <p>Repeatt collects your email address and optional survey response solely for the purpose of managing our waitlist.</p>
         <p><strong className="text-foreground">Data collected:</strong></p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Email address</li>
