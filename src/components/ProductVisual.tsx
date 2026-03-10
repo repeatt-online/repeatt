@@ -1,43 +1,72 @@
+import { IndianRupee, User, CalendarDays, RefreshCw } from "lucide-react";
+
 const ProductVisual = () => {
   return (
-    <div className="bg-card rounded-2xl shadow-card p-5 border border-border max-w-sm mx-auto text-left animate-wobble">
+    <div className="bg-card rounded-2xl shadow-card border border-border max-w-sm mx-auto text-left animate-wobble overflow-hidden">
       <style>{`
         @keyframes wobble {
           0%, 100% { transform: rotate(0deg); }
-          15% { transform: rotate(1.5deg); }
-          30% { transform: rotate(-1.2deg); }
-          45% { transform: rotate(0.8deg); }
-          60% { transform: rotate(-0.5deg); }
-          75% { transform: rotate(0.3deg); }
+          25% { transform: rotate(0.4deg); }
+          50% { transform: rotate(-0.3deg); }
+          75% { transform: rotate(0.2deg); }
         }
         .animate-wobble {
-          animation: wobble 3s ease-in-out infinite;
+          animation: wobble 4s ease-in-out infinite;
         }
       `}</style>
-      <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-3">
-        Create recurring payment
-      </p>
-      <div className="space-y-3">
-        <div className="flex justify-between items-center py-2 border-b border-border">
-          <span className="text-muted-foreground text-sm">Send</span>
-          <span className="font-semibold text-foreground">₹3,000</span>
+
+      {/* Green header */}
+      <div className="bg-primary px-5 py-3.5">
+        <p className="text-sm font-semibold text-primary-foreground">
+          Create recurring payment
+        </p>
+      </div>
+
+      <div className="p-5 space-y-0">
+        {/* Send */}
+        <div className="flex justify-between items-center py-3 border-b border-dashed border-border">
+          <div className="flex items-center gap-2.5">
+            <IndianRupee className="w-4 h-4 text-muted-foreground" />
+            <span className="text-muted-foreground text-sm">Send</span>
+          </div>
+          <span className="font-bold text-foreground text-base">₹3,000</span>
         </div>
-        <div className="flex justify-between items-center py-2 border-b border-border">
-          <span className="text-muted-foreground text-sm">To</span>
-          <span className="font-medium text-foreground">maid@upi</span>
+
+        {/* To */}
+        <div className="flex justify-between items-center py-3 border-b border-dashed border-border">
+          <div className="flex items-center gap-2.5">
+            <User className="w-4 h-4 text-muted-foreground" />
+            <span className="text-muted-foreground text-sm">To</span>
+          </div>
+          <span className="font-medium text-foreground text-sm px-3 py-1 rounded-full border border-border">maid@upi</span>
         </div>
-        <div className="flex justify-between items-center py-2 border-b border-border">
-          <span className="text-muted-foreground text-sm">Frequency</span>
-          <span className="font-medium text-foreground">Monthly</span>
+
+        {/* Frequency */}
+        <div className="flex justify-between items-center py-3 border-b border-dashed border-border">
+          <div className="flex items-center gap-2.5">
+            <CalendarDays className="w-4 h-4 text-muted-foreground" />
+            <span className="text-muted-foreground text-sm">Frequency</span>
+          </div>
+          <span className="font-semibold text-primary text-sm">Monthly</span>
         </div>
-        <div className="flex justify-between items-center py-2 border-b border-border">
-          <span className="text-muted-foreground text-sm">Date</span>
-          <span className="font-medium text-foreground">1st of every month</span>
+
+        {/* Date */}
+        <div className="flex justify-between items-center py-3 border-b border-dashed border-border">
+          <div className="flex items-center gap-2.5">
+            <span className="w-4" />
+            <span className="text-muted-foreground text-sm">Date</span>
+          </div>
+          <span className="font-medium text-foreground text-sm">1st of every month</span>
         </div>
-        <div className="flex justify-between items-center py-2">
-          <span className="text-muted-foreground text-sm">Recurring</span>
-          <div className="w-11 h-6 bg-primary rounded-full relative">
-            <div className="w-5 h-5 bg-primary-foreground rounded-full absolute right-0.5 top-0.5 shadow-sm" />
+
+        {/* Recurring toggle */}
+        <div className="flex justify-between items-center py-3 mt-1 bg-accent/50 -mx-5 px-5 rounded-b-xl">
+          <span className="font-semibold text-foreground text-sm">Recurring</span>
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs font-semibold text-primary">ON</span>
+            <div className="w-11 h-6 bg-primary rounded-full relative">
+              <div className="w-5 h-5 bg-primary-foreground rounded-full absolute right-0.5 top-0.5 shadow-sm" />
+            </div>
           </div>
         </div>
       </div>
