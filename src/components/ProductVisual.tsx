@@ -63,12 +63,17 @@ const ProductVisual = () => {
         
 
         {/* Recurring toggle */}
-        <div className="flex justify-between items-center py-3 mt-1 bg-accent/50 -mx-5 px-5 rounded-b-xl">
+        <div
+          className="flex justify-between items-center py-3 mt-1 bg-accent/50 -mx-5 px-5 rounded-b-xl cursor-pointer select-none"
+          onClick={() => setIsRecurring(!isRecurring)}
+        >
           <span className="font-semibold text-foreground text-sm">Recurring</span>
           <div className="flex items-center gap-1.5">
-            <span className="text-xs font-semibold text-primary">ON</span>
-            <div className="w-11 h-6 bg-primary rounded-full relative">
-              <div className="w-5 h-5 bg-primary-foreground rounded-full absolute right-0.5 top-0.5 shadow-sm" />
+            <span className={`text-xs font-semibold ${isRecurring ? 'text-primary' : 'text-muted-foreground'}`}>
+              {isRecurring ? 'ON' : 'OFF'}
+            </span>
+            <div className={`w-11 h-6 rounded-full relative transition-colors duration-200 ${isRecurring ? 'bg-primary' : 'bg-muted-foreground/30'}`}>
+              <div className={`w-5 h-5 bg-primary-foreground rounded-full absolute top-0.5 shadow-sm transition-all duration-200 ${isRecurring ? 'right-0.5' : 'left-0.5'}`} />
             </div>
           </div>
         </div>
