@@ -16,7 +16,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar onWaitlistClick={scrollToWaitlist} />
+      <Navbar />
       <HeroSection onWaitlistClick={scrollToWaitlist} />
       <DashboardVisual />
       <UseCasesSection />
