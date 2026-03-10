@@ -9,14 +9,14 @@ const Footer = () => {
           <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
             <RefreshCw className="w-3 h-3 text-primary-foreground" />
           </div>
-          <span className="font-bold text-sm text-foreground">Repeat</span>
+          <span className="font-bold text-sm text-foreground">Repeatt</span>
         </div>
         <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
           <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
           <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
           <a href="mailto:hello@repeatpay.in" className="hover:text-foreground transition-colors">Contact</a>
         </div>
-        <p className="text-xs text-muted-foreground mt-4">© 2026 Repeat. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground mt-4">© 2026 Repeatt. All rights reserved.</p>
       </div>
     </footer>
   );
