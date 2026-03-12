@@ -1,6 +1,5 @@
 import { useState, forwardRef } from "react";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/integrations/supabase/client";
 
 const options = [
 "Rent",
@@ -29,19 +28,19 @@ const WaitlistSection = forwardRef<HTMLDivElement>((_, ref) => {
     }
 
     setLoading(true);
-    const { error: dbError } = await supabase.from("waitlist").insert({
-      email: trimmed,
-      payment_preference: payment || null
-    });
-
-    setLoading(false);
-
-    if (dbError) {
+    try {
+      const res = await fetch("https://formspree.io/f/xzdjrlbz", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed }),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
       setError("Something went wrong. Please try again.");
-      return;
+    } finally {
+      setLoading(false);
     }
-
-    setSubmitted(true);
   };
 
   if (submitted) {
