@@ -12,15 +12,6 @@ const HeroSection = ({ onWaitlistClick }: {onWaitlistClick: () => void;}) => {
         <p className="mt-3 text-sm sm:text-base animate-fade-up text-muted-foreground font-medium" style={{ animationDelay: "0.1s" }}>
           Rent • Maid • Cook • Driver • Subscriptions
         </p>
-        <Button
-          variant="hero"
-          size="lg"
-          className="mt-6 text-sm px-6 py-2 h-10 rounded-full animate-fade-up"
-          style={{ animationDelay: "0.2s" }}
-          onClick={onWaitlistClick}>
-          
-          Join Waitlist <span className="ml-1">→</span>
-        </Button>
         <div className="mt-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <ProductVisual />
         </div>
