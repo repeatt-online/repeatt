@@ -1,6 +1,7 @@
 import { RefreshCw } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const Navbar = () => {
+const Navbar = ({ onWaitlistClick }: { onWaitlistClick?: () => void }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container flex items-center justify-between h-14 px-4">
@@ -10,6 +11,14 @@ const Navbar = () => {
           </div>
           <span className="text-lg font-bold text-emerald-500">Repeatt</span>
         </div>
+        <Button
+          variant="hero"
+          size="sm"
+          className="text-xs px-4 rounded-full"
+          onClick={onWaitlistClick}
+        >
+          Join Waitlist <span className="ml-1">→</span>
+        </Button>
       </div>
     </nav>);
 
