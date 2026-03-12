@@ -56,7 +56,7 @@ const WaitlistModal = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-sm">
+      <DialogContent className="max-w-sm top-[35%] sm:top-[50%]">
         {submitted ? (
           <div className="text-center py-4">
             <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mx-auto mb-4">
