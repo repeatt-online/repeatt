@@ -15,6 +15,16 @@ const HeroSection = ({ onWaitlistClick }: {onWaitlistClick: () => void;}) => {
         <div className="mt-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <ProductVisual />
         </div>
+        <div className="mt-6 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <Button
+            variant="hero"
+            size="default"
+            className="h-10 text-sm rounded-full px-6"
+            onClick={onWaitlistClick}
+          >
+            Join Waitlist <span className="ml-1">→</span>
+          </Button>
+        </div>
       </div>
     </section>);
 
