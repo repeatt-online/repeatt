@@ -1,6 +1,5 @@
 import { useState, forwardRef } from "react";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/integrations/supabase/client";
 
 const options = [
 "Rent",
