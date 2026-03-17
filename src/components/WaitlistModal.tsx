@@ -70,9 +70,9 @@ const WaitlistModal = ({
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-center">Join the Waitlist</DialogTitle>
+              <DialogTitle className="text-center">We're not live yet</DialogTitle>
               <DialogDescription className="text-center">
-                Early members get free forever access.
+                Enter your email to be the first to know when we launch.
               </DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-3">
@@ -94,7 +94,7 @@ const WaitlistModal = ({
                   type="submit"
                   disabled={loading}
                 >
-                  {loading ? "Submitting..." : <>Submit <span className="ml-1">→</span></>}
+                  {loading ? "Submitting..." : <>Notify Me <span className="ml-1">→</span></>}
                 </Button>
               </div>
             </form>
