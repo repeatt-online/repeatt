@@ -70,9 +70,9 @@ const WaitlistModal = ({
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-center">Join the Waitlist</DialogTitle>
+              <DialogTitle className="text-center">We're not live yet</DialogTitle>
               <DialogDescription className="text-center">
-                Early members get free forever access.
+                Enter your email to be the first to know when we launch.
               </DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-3">
