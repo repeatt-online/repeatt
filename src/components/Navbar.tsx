@@ -17,7 +17,7 @@ const Navbar = ({ onWaitlistClick }: { onWaitlistClick?: () => void }) => {
           className="text-xs px-4 rounded-full"
           onClick={onWaitlistClick}
         >
-          Join Waitlist <span className="ml-1">→</span>
+          Download for Free <span className="ml-1">→</span>
         </Button>
       </div>
     </nav>);

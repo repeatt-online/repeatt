@@ -21,7 +21,7 @@ const HeroSection = ({ onWaitlistClick }: {onWaitlistClick: () => void;}) => {
             className="h-10 text-sm rounded-full px-6"
             onClick={onWaitlistClick}
           >
-            Join Waitlist <span className="ml-1">→</span>
+            Download for Free <span className="ml-1">→</span>
           </Button>
         </div>
       </div>

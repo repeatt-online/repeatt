@@ -94,7 +94,7 @@ const WaitlistModal = ({
                   type="submit"
                   disabled={loading}
                 >
-                  {loading ? "Submitting..." : <>Submit <span className="ml-1">→</span></>}
+                  {loading ? "Submitting..." : <>Notify Me <span className="ml-1">→</span></>}
                 </Button>
               </div>
             </form>
