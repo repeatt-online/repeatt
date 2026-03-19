@@ -22,18 +22,7 @@ const ProductVisual = () => {
   const [isRecurring, setIsRecurring] = useState(true);
 
   return (
-    <div className={`bg-card rounded-2xl shadow-card border border-border max-w-sm mx-auto text-left animate-wobble overflow-hidden transition-opacity duration-300 ${!isRecurring ? 'opacity-50' : ''}`}>
-      <style>{`
-        @keyframes wobble {
-          0%, 100% { transform: rotate(0deg); }
-          25% { transform: rotate(0.4deg); }
-          50% { transform: rotate(-0.3deg); }
-          75% { transform: rotate(0.2deg); }
-        }
-        .animate-wobble {
-          animation: wobble 4s ease-in-out infinite;
-        }
-      `}</style>
+    <div className={`bg-card rounded-2xl shadow-card border border-border max-w-sm mx-auto text-left overflow-hidden ${!isRecurring ? 'opacity-50' : ''}`}>
 
       <div className="px-5 py-3.5 bg-primary">
         <p className="text-sm text-primary-foreground text-center font-bold">
