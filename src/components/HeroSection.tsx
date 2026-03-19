@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import ProductVisual from "./ProductVisual";
 
-const HeroSection = ({ onWaitlistClick }: {onWaitlistClick: () => void;}) => {
+const HeroSection = ({ onWaitlistClick }: { onWaitlistClick: () => void }) => {
   return (
     <section className="pt-20 pb-8 px-4 bg-primary-foreground text-primary-foreground">
       <div className="container max-w-lg mx-auto text-center text-primary-foreground">
@@ -25,8 +25,8 @@ const HeroSection = ({ onWaitlistClick }: {onWaitlistClick: () => void;}) => {
           </Button>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default HeroSection;
