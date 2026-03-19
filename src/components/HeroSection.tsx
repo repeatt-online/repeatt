@@ -8,7 +8,7 @@ const HeroSection = ({ onWaitlistClick }: { onWaitlistClick: () => void }) => {
         <h1 className="font-extrabold text-foreground leading-tight animate-fade-up sm:text-3xl text-xl" style={{ fontWeight: 800 }}>
           Rent paid. Maid paid. You didn't lift a finger.
         </h1>
-        <p className="mt-3 text-sm sm:text-base animate-fade-up text-muted-foreground font-medium" style={{ animationDelay: "0.1s" }}>
+        <p className="mt-3 text-sm sm:text-base text-muted-foreground font-medium">
           Rent • Maid • Cook • Driver • Subscriptions
         </p>
         <div className="mt-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
